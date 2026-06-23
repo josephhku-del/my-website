@@ -172,22 +172,15 @@
         
         .logo-meta {
             text-align: left;
-            line-height: 1.2;
+            line-height: 1.3;
         }
-        .logo-meta .abbr {
-            font-weight: 900;
-            font-size: 1.2rem;
+        .logo-meta .full-name {
+            font-weight: 700;
+            font-size: 0.95rem;
             display: block;
             color: #ffffff;
-        }
-        .logo-meta .full-title {
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.75);
-            display: block;
-            max-width: 150px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            max-width: 220px;
+            white-space: normal;
         }
 
         .hero-badge {
@@ -337,7 +330,7 @@
         .partner-block {
             font-size:1rem; 
             color:#2c4c6e; 
-            max-width:340px;
+            max-width: 380px;
             background: #ffffff;
             padding: 28px;
             border-radius: 20px;
@@ -388,7 +381,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 24px 40px;
+            gap: 24px 32px;
+            max-width: 900px;
+            margin: 0 auto;
         }
         .link-card {
             background: #ffffff;
@@ -404,6 +399,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            text-align: center;
         }
         .link-card:hover {
             background: #0b1e33;
@@ -456,7 +452,7 @@
 
         @media (max-width: 768px) {
             .hero-logos-container { gap: 16px; padding: 16px 24px; border-radius: 40px; }
-            .logo-meta { display: none; }
+            .logo-meta .full-name { font-size: 0.85rem; max-width: 160px; }
             .logo-img { width: 56px; height: 56px; } 
         }
 
@@ -468,7 +464,7 @@
             .theme-block p { font-size: 1.5rem; } 
             .organiser-card { padding: 32px 20px; }
             .links-grid { flex-direction: column; align-items: center; }
-            .link-card { width: 100%; max-width: 300px; justify-content: center; }
+            .link-card { width: 100%; max-width: 350px; justify-content: center; font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -496,27 +492,33 @@
     <header class="hero">
         <div class="container">
             
-            <!-- Real Dynamic Logo Ribbon -->
+            <!-- Real Dynamic Logo Ribbon using Full Names -->
             <div class="hero-logos-container">
                 <a href="https://icoste.org/" class="hero-logo-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?domain=icoste.org&sz=128" alt="ICEC Logo" class="logo-img">
+                    <img src="https://www.google.com/s2/favicons?domain=icoste.org&sz=128" alt="International Cost Engineering Council Logo" class="logo-img">
                     <div class="logo-meta">
-                        <span class="abbr">ICEC</span>
-                        <span class="full-title">Int'l Cost Engineering Council</span>
+                        <span class="full-name">
+                            <span class="lang-en">International Cost Engineering Council</span>
+                            <span class="lang-zh">国际成本工程委员会</span>
+                        </span>
                     </div>
                 </a>
                 <a href="https://www.paqs.net/" class="hero-logo-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?domain=paqs.net&sz=128" alt="PAQS Logo" class="logo-img">
+                    <img src="https://www.google.com/s2/favicons?domain=paqs.net&sz=128" alt="Pacific Association of Quantity Surveyors Logo" class="logo-img">
                     <div class="logo-meta">
-                        <span class="abbr">PAQS</span>
-                        <span class="full-title">Pacific Assoc. of Quantity Surveyors</span>
+                        <span class="full-name">
+                            <span class="lang-en">Pacific Association of Quantity Surveyors</span>
+                            <span class="lang-zh">太平洋工料测量师协会</span>
+                        </span>
                     </div>
                 </a>
                 <a href="https://www.hkis.org.hk/" class="hero-logo-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?domain=hkis.org.hk&sz=128" alt="HKIS Logo" class="logo-img">
+                    <img src="https://www.google.com/s2/favicons?domain=hkis.org.hk&sz=128" alt="The Hong Kong Institute of Surveyors Logo" class="logo-img">
                     <div class="logo-meta">
-                        <span class="abbr">HKIS</span>
-                        <span class="full-title">Hong Kong Institute of Surveyors</span>
+                        <span class="full-name">
+                            <span class="lang-en">The Hong Kong Institute of Surveyors</span>
+                            <span class="lang-zh">香港测量师学会</span>
+                        </span>
                     </div>
                 </a>
             </div>
@@ -550,14 +552,14 @@
             </div>
             <p class="about-description">
                 <span class="lang-en">
-                    The <strong>ICEC PAQS 2028 Congress</strong> brings together the International Cost Engineering Council (ICEC)
-                    and the Pacific Association of Quantity Surveyors (PAQS) to explore how next‑generation
+                    The <strong>ICEC PAQS 2028 Congress</strong> brings together the International Cost Engineering Council
+                    and the Pacific Association of Quantity Surveyors to explore how next‑generation
                     technologies are transforming cost engineering, project controls, and quantity surveying
                     across the Asia‑Pacific region and beyond.
                 </span>
                 <span class="lang-zh">
-                    <strong>ICEC PAQS 2028 世界大会</strong>汇聚了国际成本工程委员会（ICEC）
-                    与太平洋工料测量师协会（PAQS），共同探讨下一代技术如何改变亚太地区及全球的
+                    <strong>ICEC PAQS 2028 世界大会</strong>汇聚了国际成本工程委员会
+                    与太平洋工料测量师协会，共同探讨下一代技术如何改变亚太地区及全球的
                     成本工程、项目控制和工料测量领域。
                 </span>
             </p>
@@ -569,30 +571,30 @@
         <div class="container">
             <div class="organiser-card">
                 <!-- HKIS Logo -->
-                <img src="https://www.google.com/s2/favicons?domain=hkis.org.hk&sz=128" alt="HKIS Logo" class="card-logo-img">
+                <img src="https://www.google.com/s2/favicons?domain=hkis.org.hk&sz=128" alt="The Hong Kong Institute of Surveyors Logo" class="card-logo-img">
                 <h3><span class="lang-en">Host Organisation</span><span class="lang-zh">主办机构</span></h3>
-                <div class="org-name"><span class="lang-en">Hong Kong Institute of <span>Surveyors</span></span><span class="lang-zh">香港<span>测量师</span>学会</span></div>
+                <div class="org-name"><span class="lang-en">The Hong Kong Institute of <span>Surveyors</span></span><span class="lang-zh">香港<span>测量师</span>学会</span></div>
                 <p class="org-desc">
                     <span class="lang-en">
-                        The Hong Kong Institute of Surveyors (HKIS) is the professional body representing
+                        The Hong Kong Institute of Surveyors is the professional body representing
                         the surveying profession in Hong Kong. We are proud to host this premier event,
                         fostering innovation and collaboration in the built environment.
                     </span>
                     <span class="lang-zh">
-                        香港测量师学会（HKIS）是代表香港测量专业的专业团体。
+                        香港测量师学会是代表香港测量专业的专业团体。
                         我们很荣幸能够主办这次盛会，促进建筑环境领域的创新与合作。
                     </span>
                 </p>
             </div>
             <div class="partner-block">
                 <strong><span class="lang-en">In partnership with</span><span class="lang-zh">合作伙伴</span></strong>
-                <span class="lang-en">ICEC · International Cost Engineering Council<br>PAQS · Pacific Association of Quantity Surveyors</span>
-                <span class="lang-zh">ICEC · 国际成本工程委员会<br>PAQS · 太平洋工料测量师协会</span>
+                <span class="lang-en" style="display:block; margin-bottom:12px;">International Cost Engineering Council<br><br>Pacific Association of Quantity Surveyors</span>
+                <span class="lang-zh" style="display:block; margin-bottom:12px;">国际成本工程委员会<br><br>太平洋工料测量师协会</span>
                 
                 <div class="partner-logos">
                     <!-- ICEC & PAQS Logos -->
-                    <img src="https://www.google.com/s2/favicons?domain=icoste.org&sz=128" alt="ICEC Logo" class="partner-logo-img" title="ICEC">
-                    <img src="https://www.google.com/s2/favicons?domain=paqs.net&sz=128" alt="PAQS Logo" class="partner-logo-img" title="PAQS">
+                    <img src="https://www.google.com/s2/favicons?domain=icoste.org&sz=128" alt="International Cost Engineering Council Logo" class="partner-logo-img" title="International Cost Engineering Council">
+                    <img src="https://www.google.com/s2/favicons?domain=paqs.net&sz=128" alt="Pacific Association of Quantity Surveyors Logo" class="partner-logo-img" title="Pacific Association of Quantity Surveyors">
                 </div>
             </div>
         </div>
@@ -603,10 +605,10 @@
         <div class="container">
             <h2><span class="lang-en">Related Websites</span><span class="lang-zh">相关网站</span></h2>
             <div class="links-grid">
-                <a href="https://photoeventz.com.au/icec-paqs-2018/" class="link-card" target="_blank">📸 <span class="lang-en">ICEC PAQS 2018 Gallery</span><span class="lang-zh">ICEC PAQS 2018 图集</span></a>
-                <a href="https://www.paqs2026.com/" class="link-card" target="_blank">🌐 <span class="lang-en">PAQS 2026 Congress</span><span class="lang-zh">PAQS 2026 大会</span></a>
-                <a href="https://www.paqs.net/" class="link-card" target="_blank">🌍 <span class="lang-en">PAQS Official Site</span><span class="lang-zh">PAQS 官方网站</span></a>
-                <a href="https://icoste.org/" class="link-card" target="_blank">🧾 <span class="lang-en">ICEC Official Site</span><span class="lang-zh">ICEC 官方网站</span></a>
+                <a href="https://photoeventz.com.au/icec-paqs-2018/" class="link-card" target="_blank">📸 <span class="lang-en">2018 Congress Gallery</span><span class="lang-zh">2018 大会图集</span></a>
+                <a href="https://www.paqs2026.com/" class="link-card" target="_blank">🌐 <span class="lang-en">Pacific Association of Quantity Surveyors 2026 Congress</span><span class="lang-zh">太平洋工料测量师协会 2026 大会</span></a>
+                <a href="https://www.paqs.net/" class="link-card" target="_blank">🌍 <span class="lang-en">Pacific Association of Quantity Surveyors Official Site</span><span class="lang-zh">太平洋工料测量师协会官方网站</span></a>
+                <a href="https://icoste.org/" class="link-card" target="_blank">🧾 <span class="lang-en">International Cost Engineering Council Official Site</span><span class="lang-zh">国际成本工程委员会官方网站</span></a>
             </div>
             <p style="margin-top: 28px; color:#6b7f94; font-size:0.9rem;">
                 <span class="lang-en"><em>External links will open in a new tab.</em></span>
@@ -620,7 +622,7 @@
         <div class="container">
             <div><span class="lang-en">© 2026 · ICEC PAQS 2028 Congress · Hong Kong</span><span class="lang-zh">© 2026 · ICEC PAQS 2028 世界大会 · 香港</span></div>
             <div style="font-size:0.85rem;">
-                <span class="lang-en">Organised by the Hong Kong Institute of Surveyors</span>
+                <span class="lang-en">Organised by The Hong Kong Institute of Surveyors</span>
                 <span class="lang-zh">主办：香港测量师学会</span>
                 &nbsp;|&nbsp;
                 <a href="#"><span class="lang-en">Privacy</span><span class="lang-zh">隐私</span></a>

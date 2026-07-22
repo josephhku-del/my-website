@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICEC PAQS 2028 世界大会 · 香港</title>
+    <title>ICEC-PAQS Joint World Congress 2028 · 香港</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&family=Noto+Sans+SC:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&family=Noto+Sans+TC:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
         }
 
         body {
-            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
             background-color: #f8fafc;
             color: #0b1e33;
             line-height: 1.6;
@@ -132,57 +132,39 @@
             align-items: center;
         }
 
-        /* Logos Ribbon */
+        /* Full Logos Implementation */
         .hero-logos-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 36px;
+            gap: 40px;
             margin-bottom: 36px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 20px 48px;
-            border-radius: 80px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 24px 48px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             max-width: 95%;
             flex-wrap: wrap;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
         }
         .hero-logo-item {
             display: flex;
             align-items: center;
-            gap: 16px;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
             text-decoration: none;
             transition: transform 0.2s ease;
         }
         .hero-logo-item:hover {
             transform: translateY(-2px);
         }
-        .logo-img {
-            width: 72px; 
-            height: 72px; 
-            border-radius: 50%;
-            background: #ffffff;
+        .logo-img-full {
+            max-width: 140px; 
+            height: 64px; 
+            background: transparent;
             object-fit: contain;
-            padding: 8px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
         }
         
-        .logo-meta {
-            text-align: left;
-            line-height: 1.3;
-        }
-        .logo-meta .full-name {
-            font-weight: 700;
-            font-size: 0.95rem;
-            display: block;
-            color: #ffffff;
-            max-width: 220px;
-            white-space: normal;
-        }
-
         .hero-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);
@@ -198,24 +180,25 @@
             text-transform: uppercase;
         }
         .hero h1 {
-            font-size: clamp(2.4rem, 6.5vw, 4rem);
+            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
             font-weight: 900;
-            line-height: 1.1;
+            line-height: 1.15;
             letter-spacing: -0.02em;
             color: #ffffff;
-            max-width: 900px;
+            max-width: 1000px;
         }
         .hero h1 .highlight {
             color: #f4c542;
             text-shadow: 0 0 20px rgba(244, 197, 66, 0.2);
         }
         .hero .subhead {
-            font-size: clamp(1.5rem, 3vw, 2.4rem); 
+            font-size: clamp(1.4rem, 2.5vw, 2.2rem); 
             color: rgba(255, 255, 255, 0.95);
             margin-top: 24px;
             max-width: 1100px;
             font-weight: 600;
-            line-height: 1.4;
+            line-height: 1.5;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
         .hero .date-location {
             margin-top: 40px;
@@ -256,11 +239,11 @@
             border-left: 8px solid #c92a2a;
         }
         .theme-block p {
-            font-size: clamp(1.8rem, 4vw, 2.8rem); 
-            line-height: 1.35;
+            font-size: clamp(1.6rem, 3.5vw, 2.6rem); 
+            line-height: 1.4;
             font-weight: 800;
             color: #0b1e33;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
         .about-description {
             font-size: 1.1rem;
@@ -285,25 +268,21 @@
         }
         .organiser-card {
             background: #ffffff;
-            padding: 40px 48px;
+            padding: 48px 48px;
             border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            max-width: 550px;
+            max-width: 600px;
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .card-logo-img {
-            width: 100px; 
-            height: 100px; 
-            border-radius: 50%;
-            background: #ffffff;
+        .card-logo-img-full {
+            max-width: 240px; 
+            height: 90px; 
+            background: transparent;
             object-fit: contain;
-            padding: 12px; 
-            margin-bottom: 20px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-            border: 1px solid #f1f5f9;
+            margin-bottom: 24px;
         }
         .organiser-card h3 {
             font-size: 1.05rem;
@@ -311,35 +290,33 @@
             text-transform: uppercase;
             letter-spacing: 0.06em;
             color: #6b7f94;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         .organiser-card .org-name {
             font-size: 1.9rem;
             font-weight: 800;
             color: #0b1e33;
-            line-height: 1.2;
-        }
-        .organiser-card .org-name span {
-            color: #c92a2a;
+            line-height: 1.3;
         }
         .organiser-card .org-desc {
-            margin-top: 14px;
+            margin-top: 16px;
             color: #2c4c6e;
-            font-size: 0.98rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         .partner-block {
-            font-size:1rem; 
-            color:#2c4c6e; 
-            max-width: 380px;
+            font-size: 1rem; 
+            color: #2c4c6e; 
+            max-width: 400px;
             background: #ffffff;
-            padding: 28px;
+            padding: 32px;
             border-radius: 20px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 8px 24px rgba(0,0,0,0.03);
         }
         .partner-block strong {
             display: block;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
@@ -347,19 +324,16 @@
         }
         .partner-logos {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
             margin-top: 18px;
         }
-        .partner-logo-img {
-            width: 64px; 
-            height: 64px; 
-            border-radius: 50%;
-            background: #ffffff;
+        .partner-logo-img-full {
+            max-width: 180px; 
+            height: 60px; 
+            background: transparent;
             object-fit: contain;
-            padding: 8px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 1px solid #e2e8f0;
         }
 
         /* ===== Links Section ===== */
@@ -451,17 +425,17 @@
         }
 
         @media (max-width: 768px) {
-            .hero-logos-container { gap: 16px; padding: 16px 24px; border-radius: 40px; }
-            .logo-meta .full-name { font-size: 0.85rem; max-width: 160px; }
-            .logo-img { width: 56px; height: 56px; } 
+            .hero-logos-container { gap: 24px; padding: 20px; border-radius: 16px; }
+            .logo-img-full { max-width: 110px; height: 50px; } 
         }
 
         @media (max-width: 600px) {
             .hero { padding: 60px 0 48px; }
+            .hero h1 { font-size: 2rem; }
             .hero .subhead { font-size: 1.3rem; } 
             .hero .date-location { flex-direction: column; gap: 4px; }
             .theme-block { padding: 24px 20px; }
-            .theme-block p { font-size: 1.5rem; } 
+            .theme-block p { font-size: 1.4rem; } 
             .organiser-card { padding: 32px 20px; }
             .links-grid { flex-direction: column; align-items: center; }
             .link-card { width: 100%; max-width: 350px; justify-content: center; font-size: 0.95rem; }
@@ -473,16 +447,17 @@
     <!-- ===== Navbar ===== -->
     <nav class="navbar">
         <div class="container">
-            <div class="brand">ICEC PAQS <span>2028</span></div>
+            <div class="brand">ICEC-PAQS <span>2028</span></div>
             <div class="nav-right">
                 <div class="nav-links">
-                    <a href="#about"><span class="lang-en">About</span><span class="lang-zh">关于大会</span></a>
-                    <a href="#organiser"><span class="lang-en">Organiser</span><span class="lang-zh">主办机构</span></a>
-                    <a href="#links"><span class="lang-en">Links</span><span class="lang-zh">相关链接</span></a>
+                    <a href="#about"><span class="lang-en">About</span><span class="lang-zh">關於大會</span></a>
+                    <a href="#organiser"><span class="lang-en">Organiser</span><span class="lang-zh">主辦機構</span></a>
+                    <a href="#links"><span class="lang-en">Links</span><span class="lang-zh">相關連結</span></a>
                 </div>
                 <div class="lang-switch">
                     <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="zh">中文</button>
+                    <!-- Updated to Traditional Chinese Button -->
+                    <button class="lang-btn" data-lang="zh">繁體中文</button>
                 </div>
             </div>
         </div>
@@ -492,50 +467,36 @@
     <header class="hero">
         <div class="container">
             
-            <!-- Real Dynamic Logo Ribbon using Full Names -->
+            <!-- Dynamic Logo Ribbon using Local Full Images -->
             <div class="hero-logos-container">
-                <a href="https://icoste.org/" class="hero-logo-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?domain=icoste.org&sz=128" alt="International Cost Engineering Council Logo" class="logo-img">
-                    <div class="logo-meta">
-                        <span class="full-name">
-                            <span class="lang-en">International Cost Engineering Council</span>
-                            <span class="lang-zh">国际成本工程委员会</span>
-                        </span>
-                    </div>
+                <a href="https://icoste.org/" class="hero-logo-item" target="_blank" title="International Cost Engineering Council">
+                    <!-- Update this file path to match your ICEC logo attachment -->
+                    <img src="./icec-full-logo.png" alt="International Cost Engineering Council Logo" class="logo-img-full" onerror="this.src='https://via.placeholder.com/140x64?text=ICEC+Logo'">
                 </a>
-                <a href="https://www.paqs.net/" class="hero-logo-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?domain=paqs.net&sz=128" alt="Pacific Association of Quantity Surveyors Logo" class="logo-img">
-                    <div class="logo-meta">
-                        <span class="full-name">
-                            <span class="lang-en">Pacific Association of Quantity Surveyors</span>
-                            <span class="lang-zh">太平洋工料测量师协会</span>
-                        </span>
-                    </div>
+                <a href="https://www.paqs.net/" class="hero-logo-item" target="_blank" title="Pacific Association of Quantity Surveyors">
+                    <!-- Update this file path to match your PAQS logo attachment -->
+                    <img src="./paqs-full-logo.png" alt="Pacific Association of Quantity Surveyors Logo" class="logo-img-full" onerror="this.src='https://via.placeholder.com/140x64?text=PAQS+Logo'">
                 </a>
-                <a href="https://www.hkis.org.hk/" class="hero-logo-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?domain=hkis.org.hk&sz=128" alt="The Hong Kong Institute of Surveyors Logo" class="logo-img">
-                    <div class="logo-meta">
-                        <span class="full-name">
-                            <span class="lang-en">The Hong Kong Institute of Surveyors</span>
-                            <span class="lang-zh">香港测量师学会</span>
-                        </span>
-                    </div>
+                <a href="https://www.hkis.org.hk/" class="hero-logo-item" target="_blank" title="The Hong Kong Institute of Surveyors">
+                    <!-- Update this file path to match your HKIS logo attachment -->
+                    <img src="./hkis-full-logo.png" alt="The Hong Kong Institute of Surveyors Logo" class="logo-img-full" onerror="this.src='https://via.placeholder.com/140x64?text=HKIS+Logo'">
                 </a>
             </div>
 
             <span class="hero-badge"><span class="lang-en">🏙️ Hong Kong · 2028</span><span class="lang-zh">🏙️ 香港 · 2028</span></span>
             <h1>
-                <span class="lang-en">ICEC PAQS <span class="highlight">2028</span><br><span style="font-size: 0.5em; font-weight: 700; color: rgba(255,255,255,0.85);">World Congress</span></span>
-                <span class="lang-zh">ICEC PAQS <span class="highlight">2028</span><br><span style="font-size: 0.5em; font-weight: 700; color: rgba(255,255,255,0.85);">世界大会</span></span>
+                <span class="lang-en">ICEC-PAQS Joint World Congress <span class="highlight">2028</span></span>
+                <span class="lang-zh">ICEC-PAQS 2028 聯合世界大會</span>
             </h1>
             <p class="subhead">
                 <span class="lang-en">Beyond the Algorithm: Elevating Construction Cost Management<br>through Big Data, Digital Twins, and Cognitive AI</span>
-                <span class="lang-zh">超越算法：通过大数据、数字孪生和认知人工智能<br>提升建筑成本管理</span>
+                <!-- Updated to Traditional Chinese for HK Standards -->
+                <span class="lang-zh">超越演算法：透過大數據、數字孿生和認知人工智能<br>提升建築成本管理</span>
             </p>
             <div class="date-location">
                 <span><span class="lang-en">📅 2028 (dates to be confirmed)</span><span class="lang-zh">📅 2028年（日期待定）</span></span>
                 <span style="opacity:0.4;">|</span>
-                <span><span class="lang-en">📍 Venue: To be confirmed</span><span class="lang-zh">📍 地点：待定</span></span>
+                <span><span class="lang-en">📍 Venue: To be confirmed</span><span class="lang-zh">📍 地點：待定</span></span>
             </div>
         </div>
     </header>
@@ -543,24 +504,24 @@
     <!-- ===== About Section ===== -->
     <section class="section-about" id="about">
         <div class="container">
-            <h2><span class="lang-en">About the Congress</span><span class="lang-zh">关于大会</span></h2>
+            <h2><span class="lang-en">About the Congress</span><span class="lang-zh">關於大會</span></h2>
             <div class="theme-block">
                 <p>
                     <span class="lang-en">“Beyond the Algorithm: Elevating Construction Cost Management through Big Data, Digital Twins, and Cognitive AI”</span>
-                    <span class="lang-zh">“超越算法：通过大数据、数字孪生和认知人工智能提升建筑成本管理”</span>
+                    <span class="lang-zh">“超越演算法：透過大數據、數字孿生和認知人工智能提升建築成本管理”</span>
                 </p>
             </div>
             <p class="about-description">
                 <span class="lang-en">
-                    The <strong>ICEC PAQS 2028 Congress</strong> brings together the International Cost Engineering Council
+                    The <strong>ICEC-PAQS Joint World Congress 2028</strong> brings together the International Cost Engineering Council
                     and the Pacific Association of Quantity Surveyors to explore how next‑generation
                     technologies are transforming cost engineering, project controls, and quantity surveying
                     across the Asia‑Pacific region and beyond.
                 </span>
                 <span class="lang-zh">
-                    <strong>ICEC PAQS 2028 世界大会</strong>汇聚了国际成本工程委员会
-                    与太平洋工料测量师协会，共同探讨下一代技术如何改变亚太地区及全球的
-                    成本工程、项目控制和工料测量领域。
+                    <strong>ICEC-PAQS 2028 聯合世界大會</strong>匯聚了國際成本工程委員會
+                    與太平洋工料測量師協會，共同探討下一代科技如何改變亞太地區及全球的
+                    成本工程、項目控制和工料測量領域。
                 </span>
             </p>
         </div>
@@ -570,10 +531,14 @@
     <section class="section-organiser" id="organiser">
         <div class="container">
             <div class="organiser-card">
-                <!-- HKIS Logo -->
-                <img src="https://www.google.com/s2/favicons?domain=hkis.org.hk&sz=128" alt="The Hong Kong Institute of Surveyors Logo" class="card-logo-img">
-                <h3><span class="lang-en">Host Organisation</span><span class="lang-zh">主办机构</span></h3>
-                <div class="org-name"><span class="lang-en">The Hong Kong Institute of <span>Surveyors</span></span><span class="lang-zh">香港<span>测量师</span>学会</span></div>
+                <!-- Main HKIS Full Logo -->
+                <img src="./hkis-full-logo.png" alt="The Hong Kong Institute of Surveyors Logo" class="card-logo-img-full" onerror="this.src='https://via.placeholder.com/240x90?text=HKIS+Full+Logo'">
+                
+                <h3><span class="lang-en">Host Organisation</span><span class="lang-zh">主辦機構</span></h3>
+                <div class="org-name">
+                    <span class="lang-en">The Hong Kong Institute of Surveyors</span>
+                    <span class="lang-zh">香港測量師學會</span>
+                </div>
                 <p class="org-desc">
                     <span class="lang-en">
                         The Hong Kong Institute of Surveyors is the professional body representing
@@ -581,20 +546,20 @@
                         fostering innovation and collaboration in the built environment.
                     </span>
                     <span class="lang-zh">
-                        香港测量师学会是代表香港测量专业的专业团体。
-                        我们很荣幸能够主办这次盛会，促进建筑环境领域的创新与合作。
+                        香港測量師學會是代表香港測量專業的專業團體。
+                        我們很榮幸能夠主辦這次盛會，促進建築環境領域的創新與合作。
                     </span>
                 </p>
             </div>
             <div class="partner-block">
-                <strong><span class="lang-en">In partnership with</span><span class="lang-zh">合作伙伴</span></strong>
-                <span class="lang-en" style="display:block; margin-bottom:12px;">International Cost Engineering Council<br><br>Pacific Association of Quantity Surveyors</span>
-                <span class="lang-zh" style="display:block; margin-bottom:12px;">国际成本工程委员会<br><br>太平洋工料测量师协会</span>
+                <strong><span class="lang-en">In partnership with</span><span class="lang-zh">合作夥伴</span></strong>
+                <span class="lang-en" style="display:block; margin-bottom:12px; font-weight:600;">International Cost Engineering Council<br><br>Pacific Association of Quantity Surveyors</span>
+                <span class="lang-zh" style="display:block; margin-bottom:12px; font-weight:600;">國際成本工程委員會<br><br>太平洋工料測量師協會</span>
                 
                 <div class="partner-logos">
-                    <!-- ICEC & PAQS Logos -->
-                    <img src="https://www.google.com/s2/favicons?domain=icoste.org&sz=128" alt="International Cost Engineering Council Logo" class="partner-logo-img" title="International Cost Engineering Council">
-                    <img src="https://www.google.com/s2/favicons?domain=paqs.net&sz=128" alt="Pacific Association of Quantity Surveyors Logo" class="partner-logo-img" title="Pacific Association of Quantity Surveyors">
+                    <!-- Partner Full Logos -->
+                    <img src="./icec-full-logo.png" alt="International Cost Engineering Council Logo" class="partner-logo-img-full" onerror="this.src='https://via.placeholder.com/180x60?text=ICEC+Full+Logo'">
+                    <img src="./paqs-full-logo.png" alt="Pacific Association of Quantity Surveyors Logo" class="partner-logo-img-full" onerror="this.src='https://via.placeholder.com/180x60?text=PAQS+Full+Logo'">
                 </div>
             </div>
         </div>
@@ -603,16 +568,16 @@
     <!-- ===== Links Section ===== -->
     <section class="section-links" id="links">
         <div class="container">
-            <h2><span class="lang-en">Related Websites</span><span class="lang-zh">相关网站</span></h2>
+            <h2><span class="lang-en">Related Websites</span><span class="lang-zh">相關連結</span></h2>
             <div class="links-grid">
-                <a href="https://photoeventz.com.au/icec-paqs-2018/" class="link-card" target="_blank">📸 <span class="lang-en">2018 Congress Gallery</span><span class="lang-zh">2018 大会图集</span></a>
-                <a href="https://www.paqs2026.com/" class="link-card" target="_blank">🌐 <span class="lang-en">Pacific Association of Quantity Surveyors 2026 Congress</span><span class="lang-zh">太平洋工料测量师协会 2026 大会</span></a>
-                <a href="https://www.paqs.net/" class="link-card" target="_blank">🌍 <span class="lang-en">Pacific Association of Quantity Surveyors Official Site</span><span class="lang-zh">太平洋工料测量师协会官方网站</span></a>
-                <a href="https://icoste.org/" class="link-card" target="_blank">🧾 <span class="lang-en">International Cost Engineering Council Official Site</span><span class="lang-zh">国际成本工程委员会官方网站</span></a>
+                <a href="https://photoeventz.com.au/icec-paqs-2018/" class="link-card" target="_blank">📸 <span class="lang-en">2018 Congress Gallery</span><span class="lang-zh">2018 大會圖集</span></a>
+                <a href="https://www.paqs2026.com/" class="link-card" target="_blank">🌐 <span class="lang-en">Pacific Association of Quantity Surveyors 2026 Congress</span><span class="lang-zh">太平洋工料測量師協會 2026 大會</span></a>
+                <a href="https://www.paqs.net/" class="link-card" target="_blank">🌍 <span class="lang-en">Pacific Association of Quantity Surveyors Official Site</span><span class="lang-zh">太平洋工料測量師協會官方網站</span></a>
+                <a href="https://icoste.org/" class="link-card" target="_blank">🧾 <span class="lang-en">International Cost Engineering Council Official Site</span><span class="lang-zh">國際成本工程委員會官方網站</span></a>
             </div>
             <p style="margin-top: 28px; color:#6b7f94; font-size:0.9rem;">
                 <span class="lang-en"><em>External links will open in a new tab.</em></span>
-                <span class="lang-zh"><em>外部链接将在新标签页中打开。</em></span>
+                <span class="lang-zh"><em>外部連結將在新分頁中打開。</em></span>
             </p>
         </div>
     </section>
@@ -620,14 +585,14 @@
     <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
-            <div><span class="lang-en">© 2026 · ICEC PAQS 2028 Congress · Hong Kong</span><span class="lang-zh">© 2026 · ICEC PAQS 2028 世界大会 · 香港</span></div>
+            <div><span class="lang-en">© 2026 · ICEC-PAQS Joint World Congress 2028 · Hong Kong</span><span class="lang-zh">© 2026 · ICEC-PAQS 2028 聯合世界大會 · 香港</span></div>
             <div style="font-size:0.85rem;">
                 <span class="lang-en">Organised by The Hong Kong Institute of Surveyors</span>
-                <span class="lang-zh">主办：香港测量师学会</span>
+                <span class="lang-zh">主辦：香港測量師學會</span>
                 &nbsp;|&nbsp;
-                <a href="#"><span class="lang-en">Privacy</span><span class="lang-zh">隐私</span></a>
+                <a href="#"><span class="lang-en">Privacy</span><span class="lang-zh">私隱政策</span></a>
                 ·
-                <a href="#"><span class="lang-en">Contact</span><span class="lang-zh">联系我们</span></a>
+                <a href="#"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
             </div>
         </div>
     </footer>

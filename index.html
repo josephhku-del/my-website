@@ -27,6 +27,23 @@
             padding: 0 24px;
         }
 
+        /* ===== Top Backdrop Image Banner ===== */
+        .top-backdrop-container {
+            width: 100%;
+            background-color: #0b1e33;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 3px solid #c92a2a;
+        }
+        .top-backdrop-img {
+            width: 100%;
+            max-height: 250px; /* Reduced and controlled height */
+            object-fit: cover;
+            display: block;
+        }
+
         /* ===== Language Switcher & Nav ===== */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
@@ -110,6 +127,7 @@
             .nav-right { width: 100%; justify-content: space-between; }
             .nav-links a { margin: 0 8px; }
             .nav-links a:not(:last-child) { margin-right: 8px; }
+            .top-backdrop-img { max-height: 160px; }
         }
 
         /* ===== Hero ===== */
@@ -444,6 +462,11 @@
 </head>
 <body class="lang-en">
 
+    <!-- ===== Top Backdrop Image Banner ===== -->
+    <div class="top-backdrop-container">
+        <img src="https://github.com/josephhku-del/my-website/blob/main/congressthemebackdrop.jpeg?raw=true" alt="Congress Theme Backdrop" class="top-backdrop-img">
+    </div>
+
     <!-- ===== Navbar ===== -->
     <nav class="navbar">
         <div class="container">
@@ -466,7 +489,7 @@
     <header class="hero">
         <div class="container">
             
-            <!-- Dynamic Logo Ribbon using your uploaded GitHub image filenames -->
+            <!-- Dynamic Logo Ribbon -->
             <div class="hero-logos-container">
                 <a href="https://icoste.org/" class="hero-logo-item" target="_blank" title="International Cost Engineering Council">
                     <img src="https://github.com/josephhku-del/my-website/blob/main/iceclogo.jpg?raw=true" alt="International Cost Engineering Council Logo" class="logo-img-full">
@@ -486,12 +509,12 @@
             </h1>
             <p class="subhead">
                 <span class="lang-en">Beyond the Algorithm: Elevating Construction Cost Management<br>through Big Data, Digital Twins, and Cognitive AI</span>
-                <span class="lang-zh">超越演算法：透過大數據、數字孿生和認知人工智能<br>提升建築成本管理</span>
+                <span class="lang-zh">超越演算法：透過大數據, 數字孿生和認知人工智能<br>提升建築成本管理</span>
             </p>
             <div class="date-location">
                 <span><span class="lang-en">📅 September 2026</span><span class="lang-zh">📅 2026年9月</span></span>
                 <span style="opacity:0.4;">|</span>
-                <span><span class="lang-en">📍 Venue: To be confirmed</span><span class="lang-zh">📍 地点：待定</span></span>
+                <span><span class="lang-en">📍 Venue: To be confirmed</span><span class="lang-zh">📍 地點：待定</span></span>
             </div>
         </div>
     </header>
@@ -503,7 +526,7 @@
             <div class="theme-block">
                 <p>
                     <span class="lang-en">“Beyond the Algorithm: Elevating Construction Cost Management through Big Data, Digital Twins, and Cognitive AI”</span>
-                    <span class="lang-zh">“超越演算法：透過大數據、數字孿生和認知人工智能提升建築成本管理”</span>
+                    <span class="lang-zh">“超越演算法：透過大數據, 數字孿生和認知人工智能提升建築成本管理”</span>
                 </p>
             </div>
             <p class="about-description">
@@ -515,7 +538,7 @@
                 </span>
                 <span class="lang-zh">
                     <strong>ICEC-PAQS 2028 聯合世界大會</strong>匯聚了國際成本工程委員會
-                    與太平洋工料測量師協會，共同探討下一代科技如何改變亞太地區及全球的
+                    與太平洋工料測量師協會, 共同探討下一代科技如何改變亞太地區及全球的
                     成本工程、項目控制和工料測量領域。
                 </span>
             </p>
@@ -541,7 +564,7 @@
                     </span>
                     <span class="lang-zh">
                         香港測量師學會是代表香港測量專業的專業團體。
-                        我們很榮幸能夠主辦這次盛會，促進建築環境領域的創新與合作。
+                        我們很榮幸能夠主辦這次盛會, 促進建築環境領域的創新與合作。
                     </span>
                 </p>
             </div>

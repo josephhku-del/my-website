@@ -27,20 +27,21 @@
             padding: 0 24px;
         }
 
-        /* ===== Top Backdrop Image Banner ===== */
+        /* ===== Top Backdrop Image Banner (Ratio Preserved) ===== */
         .top-backdrop-container {
             width: 100%;
-            background-color: #0b1e33;
-            overflow: hidden;
+            background-color: #0b1e33; /* Solid background filling any extra lateral space */
             display: flex;
             justify-content: center;
             align-items: center;
             border-bottom: 3px solid #c92a2a;
+            padding: 10px 0;
         }
         .top-backdrop-img {
             width: 100%;
-            max-height: 250px; /* Reduced and controlled height */
-            object-fit: cover;
+            max-height: 180px; /* Reduced overall height */
+            height: auto;
+            object-fit: contain; /* Keeps the full image visible without cropping */
             display: block;
         }
 
@@ -127,7 +128,7 @@
             .nav-right { width: 100%; justify-content: space-between; }
             .nav-links a { margin: 0 8px; }
             .nav-links a:not(:last-child) { margin-right: 8px; }
-            .top-backdrop-img { max-height: 160px; }
+            .top-backdrop-img { max-height: 120px; }
         }
 
         /* ===== Hero ===== */
@@ -462,7 +463,7 @@
 </head>
 <body class="lang-en">
 
-    <!-- ===== Top Backdrop Image Banner ===== -->
+    <!-- ===== Top Backdrop Image Banner (Ratio Preserved) ===== -->
     <div class="top-backdrop-container">
         <img src="https://github.com/josephhku-del/my-website/blob/main/congressthemebackdrop.jpeg?raw=true" alt="Congress Theme Backdrop" class="top-backdrop-img">
     </div>

@@ -915,39 +915,44 @@
                     </div>
                 </div>
 
-                <!-- Form Card - ZERO EXTERNAL LINKS -->
+                <!-- Form Card -->
                 <div class="contact-form-card">
-                    <form id="safeContactForm">
-                        <div id="formStatus" style="display:none; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-weight: 600; font-size: 0.95rem;"></div>
+                    <!-- Standard FormSubmit Form using your secure hash -->
+                    <form action="https://formsubmit.co/47422ac3ceb3cb128c3de03e69f7915f" method="POST">
+                        
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Inquiry - ICEC-PAQS Joint World Congress 2028">
+                        <input type="hidden" name="_next" value="https://www.icecpaqs2028.com/">
+                        <input type="hidden" name="_captcha" value="false">
 
                         <div class="form-group">
                             <label for="fullName"><span class="lang-en">Full Name *</span><span class="lang-zh">姓名 *</span></label>
-                            <input type="text" id="fullName" class="form-control" placeholder="e.g. Sr John Doe" required>
+                            <input type="text" name="Name" id="fullName" class="form-control" placeholder="e.g. Sr John Doe" required>
                         </div>
 
                         <div class="form-group">
                             <label for="emailAddr"><span class="lang-en">Email Address *</span><span class="lang-zh">電郵地址 *</span></label>
-                            <input type="email" id="emailAddr" class="form-control" placeholder="e.g. john.doe@company.com" required>
+                            <input type="email" name="Email" id="emailAddr" class="form-control" placeholder="e.g. john.doe@company.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="orgName"><span class="lang-en">Company / Organisation</span><span class="lang-zh">公司 / 機構名稱</span></label>
-                            <input type="text" id="orgName" class="form-control" placeholder="e.g. HKIS / Quantity Surveying Firm">
+                            <input type="text" name="Organisation" id="orgName" class="form-control" placeholder="e.g. HKIS / Quantity Surveying Firm">
                         </div>
 
                         <div class="form-group">
                             <label for="msgSubject"><span class="lang-en">Subject</span><span class="lang-zh">主題</span></label>
-                            <input type="text" id="msgSubject" class="form-control" placeholder="e.g. Sponsorship Inquiry / Registration">
+                            <input type="text" name="Subject" id="msgSubject" class="form-control" placeholder="e.g. Sponsorship Inquiry / Registration">
                         </div>
 
                         <div class="form-group">
                             <label for="messageBody"><span class="lang-en">Message *</span><span class="lang-zh">訊息內容 *</span></label>
-                            <textarea id="messageBody" class="form-control" placeholder="Type your message here..." required></textarea>
+                            <textarea name="Message" id="messageBody" class="form-control" placeholder="Type your message here..." required></textarea>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="submit-btn">
-                            <span class="lang-en">✉️ Send via Email Client</span>
-                            <span class="lang-zh">✉️ 開啟電郵發送</span>
+                        <button type="submit" class="submit-btn">
+                            <span class="lang-en">✉️ Send Message</span>
+                            <span class="lang-zh">✉️ 發送訊息</span>
                         </button>
                     </form>
                 </div>
@@ -979,12 +984,14 @@
                 <span class="lang-en">Organised by The Hong Kong Institute of Surveyors</span>
                 <span class="lang-zh">主辦：香港測量師學會</span>
                 &nbsp;|&nbsp;
-                <a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
+                <a href="#"><span class="lang-en">Privacy</span><span class="lang-zh">私隱政策</span></a>
+                ·
+                <a href="#"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
             </div>
         </div>
     </footer>
 
-    <!-- ===== Language Toggle Script and Local Mailto Handler ===== -->
+    <!-- ===== Language Toggle Script ===== -->
     <script>
         (function() {
             // Language Handler
@@ -1018,41 +1025,6 @@
                     setLanguage(lang);
                 });
             });
-
-            // Contact Form Native Mailto Handler (Completely safe from Firewalls)
-            const contactForm = document.getElementById('safeContactForm');
-            const formStatus = document.getElementById('formStatus');
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const name = document.getElementById('fullName').value;
-                    const email = document.getElementById('emailAddr').value;
-                    const org = document.getElementById('orgName').value;
-                    const subject = document.getElementById('msgSubject').value || 'Inquiry - ICEC-PAQS Joint World Congress 2028';
-                    const message = document.getElementById('messageBody').value;
-                    
-                    const isZh = body.classList.contains('lang-zh');
-
-                    // Formats the body to open cleanly in the user's default email client
-                    const formattedBody = `Name: ${name}\nEmail: ${email}\nOrganisation: ${org}\n\nMessage:\n${message}`;
-                    
-                    // Creates a safe mailto link that your browser executes natively without network requests
-                    const mailtoUrl = `mailto:icecpaqs28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedBody)}`;
-
-                    // Trigger the user's email client
-                    window.location.href = mailtoUrl;
-
-                    // Show success message
-                    formStatus.style.display = 'block';
-                    formStatus.style.background = '#dcfce7';
-                    formStatus.style.color = '#166534';
-                    formStatus.innerText = isZh 
-                        ? '✅ 已嘗試開啟您的電郵應用程式發送訊息。如未成功，請直接發送電郵至 icecpaqs28@gmail.com。' 
-                        : '✅ Opening your local mail application... If it doesn\'t open, you can email us directly at icecpaqs28@gmail.com.';
-                });
-            }
         })();
     </script>
 </body>

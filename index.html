@@ -710,6 +710,7 @@
     <header class="hero">
         <div class="container">
             
+            <!-- Dynamic Logo Ribbon -->
             <div class="hero-logos-container">
                 <a href="https://icoste.org/" class="hero-logo-item" target="_blank" title="International Cost Engineering Council">
                     <img src="https://github.com/josephhku-del/my-website/blob/main/iceclogo.jpg?raw=true" alt="International Cost Engineering Council Logo" class="logo-img-full">
@@ -768,19 +769,210 @@
     <!-- ===== Organising Committee Section ===== -->
     <section class="section-committee" id="committee">
         <div class="container">
-            <h2><span class="lang-en">Organising Committee</span><span class="lang-zh">籌備委員會</span></h2>
-            <p class="section-subtitle"><span class="lang-en">Official QSD Council 2024-2025</span><span class="lang-zh">QSD 理事會 2024-2025</span></p>
+            <h2 style="font-size: 2.2rem; font-weight: 700; text-align: center; color: #0b1e33; margin-bottom: 12px;">
+                <span class="lang-en">Organising Committee</span>
+                <span class="lang-zh">籌備委員會</span>
+            </h2>
+            <p style="text-align: center; color: #6b7f94; font-size: 1.05rem; margin-bottom: 48px;">
+                <span class="lang-en">Meet the team leading the preparation of the ICEC-PAQS Joint World Congress</span>
+                <span class="lang-zh">認識引領 ICEC-PAQS 聯合世界大會籌備工作的委員會成員</span>
+            </p>
 
-            <div class="committee-grid">
-                <!-- Data from HKIS Official Source -->
-                <div class="committee-card"><div class="member-name">Sr NGAI Chi Hang, Tim</div><div class="member-role">Chairman</div></div>
-                <div class="committee-card"><div class="member-name">Sr TING Yuen Chun Eric</div><div class="member-role">Vice-Chairman</div></div>
-                <div class="committee-card"><div class="member-name">Sr NG Man Yan Mandy</div><div class="member-role">Vice-Chairman</div></div>
-                <div class="committee-card"><div class="member-name">Sr WONG Wai Yee Christina</div><div class="member-role">Honorary Secretary</div></div>
-                <div class="committee-card"><div class="member-name">Sr WONG Shuk Yu, Karen</div><div class="member-role">Honorary Treasurer</div></div>
-                <div class="committee-card"><div class="member-name">Sr CHONG Hok Ching, Joseph</div><div class="member-role">OC Chair / Council Member</div></div>
-                <div class="committee-card"><div class="member-name">Sr YING Chung Sau, Rex</div><div class="member-role">Council Member</div></div>
-                <div class="committee-card"><div class="member-name">Sr LO Kar Yin, Betty</div><div class="member-role">Council Member</div></div>
+            <style>
+                .committee-group { margin-bottom: 40px; }
+                .committee-group-title {
+                    font-size: 1.25rem; font-weight: 800; color: #c92a2a; margin-bottom: 20px;
+                    text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 12px;
+                }
+                .committee-group-title::after { content: ''; flex: 1; height: 2px; background: #e2e8f0; }
+                .committee-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+                .committee-card {
+                    background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;
+                    padding: 32px 24px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+                    transition: transform 0.2s, box-shadow 0.2s; text-align: center;
+                }
+                .committee-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(11,30,51,0.08); border-color: #cbd5e1; }
+                .member-photo {
+                    width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 20px;
+                    background-color: #f8fafc; border: 4px solid #ffffff; box-shadow: 0 4px 12px rgba(11,30,51,0.08); overflow: hidden;
+                }
+                .member-photo img { width: 100%; height: 100%; object-fit: cover; }
+                .member-role { font-size: 0.82rem; font-weight: 700; color: #6b7f94; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+                .member-name { font-size: 1.2rem; font-weight: 800; color: #0b1e33; margin-bottom: 4px; }
+                .member-title { font-size: 0.9rem; color: #475569; line-height: 1.4; }
+            </style>
+
+            <!-- Advisors Group -->
+            <div class="committee-group">
+                <div class="committee-group-title">
+                    <span class="lang-en">Advisors</span>
+                    <span class="lang-zh">大會顧問</span>
+                </div>
+                <div class="committee-grid">
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr T.T. Cheung"></div>
+                        <div class="member-role"><span class="lang-en">Advisor</span><span class="lang-zh">顧問</span></div>
+                        <div class="member-name">Sr T.T. Cheung</div>
+                    </div>
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Francis Leung"></div>
+                        <div class="member-role"><span class="lang-en">Advisor</span><span class="lang-zh">顧問</span></div>
+                        <div class="member-name">Sr Francis Leung</div>
+                    </div>
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Keith Yim"></div>
+                        <div class="member-role"><span class="lang-en">Advisor</span><span class="lang-zh">顧問</span></div>
+                        <div class="member-name">Sr Keith Yim</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Committee Members & Core Roles Group -->
+            <div class="committee-group">
+                <div class="committee-group-title">
+                    <span class="lang-en">Committee Members & Core Roles</span>
+                    <span class="lang-zh">委員會委員及核心職務</span>
+                </div>
+                <div class="committee-grid">
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Joseph Chong -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Joseph Chong"></div>
+                        <div class="member-role"><span class="lang-en">OC Chair</span><span class="lang-zh">籌備委員會主席</span></div>
+                        <div class="member-name">Sr Joseph Chong</div>
+                    </div>
+                    
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Paul Wong Kwok-leung"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Paul Wong Kwok-leung</div>
+                        <div class="member-title">
+                            <span class="lang-en">Sponsorship & Social Programmes</span>
+                            <span class="lang-zh">贊助及社交活動</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Amelia Fok"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Amelia Fok</div>
+                        <div class="member-title">
+                            <span class="lang-en">Finance & Board Meeting</span>
+                            <span class="lang-zh">財務及理事會會議</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Prof. Mei-yung Leung"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Prof. Mei-yung Leung</div>
+                        <div class="member-title">
+                            <span class="lang-en">Academic & Technical Papers</span>
+                            <span class="lang-zh">學術及技術論文</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Dr. Sandy Tang"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Dr. Sandy Tang</div>
+                        <div class="member-title">
+                            <span class="lang-en">Academic & Technical Papers</span>
+                            <span class="lang-zh">學術及技術論文</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Rex Ying -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Rex Ying"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Rex Ying</div>
+                        <div class="member-title">
+                            <span class="lang-en">Venue Sourcing, Logistics & Technical Visits</span>
+                            <span class="lang-zh">場地採購、物流及技術考察</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Betty Lo -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Betty Lo"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Betty Lo</div>
+                        <div class="member-title">
+                            <span class="lang-en">Technical Visits</span>
+                            <span class="lang-zh">技術考察</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Sasa Zhang"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Sasa Zhang</div>
+                        <div class="member-title">
+                            <span class="lang-en">Promotional Video</span>
+                            <span class="lang-zh">宣傳影片</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Sunny Choi"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Sunny Choi</div>
+                        <div class="member-title">
+                            <span class="lang-en">Mainland China (CCEA & Mainland Institutes)</span>
+                            <span class="lang-zh">中國內地 (CCEA及內地機構)</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Karen Wong -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Karen Wong"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Karen Wong</div>
+                        <div class="member-title">
+                            <span class="lang-en">Young Programme</span>
+                            <span class="lang-zh">青年計劃</span>
+                        </div>
+                    </div>
+
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Eric Ting -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Eric Ting"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Eric Ting</div>
+                    </div>
+
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Christina Wong -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Christina Wong"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Christina Wong</div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Winnie Wong"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Winnie Wong</div>
+                    </div>
+
+                    <div class="committee-card">
+                        <!-- Found on HKIS link: Sr Mandy Ng -->
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Mandy Ng"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Mandy Ng</div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Daniel Ho"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Daniel Ho</div>
+                    </div>
+
+                    <div class="committee-card">
+                        <div class="member-photo"><img src="https://placehold.co/150x150/e2e8f0/94a3b8?text=Photo" alt="Sr Antony Man"></div>
+                        <div class="member-role"><span class="lang-en">Committee Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Antony Man</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -789,36 +981,198 @@
     <section class="section-organiser" id="organiser">
         <div class="container">
             <div class="organiser-card">
-                <img src="https://github.com/josephhku-del/my-website/blob/main/Screenshot%202026-07-21%20103627.jpg?raw=true" alt="HKIS Logo" class="card-logo-img-full">
+                <img src="https://github.com/josephhku-del/my-website/blob/main/Screenshot%202026-07-21%20103627.jpg?raw=true" alt="The Hong Kong Institute of Surveyors Logo" class="card-logo-img-full">
+                
                 <h3><span class="lang-en">Host Organisation</span><span class="lang-zh">主辦機構</span></h3>
-                <div class="org-name"><span class="lang-en">The Hong Kong Institute of Surveyors</span><span class="lang-zh">香港測量師學會</span></div>
+                <div class="org-name">
+                    <span class="lang-en">The Hong Kong Institute of Surveyors</span>
+                    <span class="lang-zh">香港測量師學會</span>
+                </div>
+                <p class="org-desc">
+                    <span class="lang-en">
+                        The Hong Kong Institute of Surveyors is the professional body representing
+                        the surveying profession in Hong Kong. We are proud to host this premier event,
+                        fostering innovation and collaboration in the built environment.
+                    </span>
+                    <span class="lang-zh">
+                        香港測量師學會是代表香港測量專業的專業團體。
+                        我們很榮幸能夠主辦這次盛會, 促進建築環境領域的創新與合作。
+                    </span>
+                </p>
             </div>
+            <div class="partner-block">
+                <strong><span class="lang-en">In partnership with</span><span class="lang-zh">合作夥伴</span></strong>
+                <span class="lang-en" style="display:block; margin-bottom:12px; font-weight:600;">International Cost Engineering Council<br><br>Pacific Association of Quantity Surveyors</span>
+                <span class="lang-zh" style="display:block; margin-bottom:12px; font-weight:600;">國際成本工程委員會<br><br>太平洋工料測量師協會</span>
+                
+                <div class="partner-logos">
+                    <img src="https://github.com/josephhku-del/my-website/blob/main/iceclogo.jpg?raw=true" alt="International Cost Engineering Council Logo" class="partner-logo-img-full">
+                    <img src="https://github.com/josephhku-del/my-website/blob/main/PAQS-logo%20(1).jpg?raw=true" alt="Pacific Association of Quantity Surveyors Logo" class="partner-logo-img-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="section-contact" id="contact">
+        <div class="container">
+            <h2><span class="lang-en">Contact Us</span><span class="lang-zh">聯絡我們</span></h2>
+            <p class="contact-subtitle">
+                <span class="lang-en">Have questions or sponsorship inquiries? Reach out to the Congress Secretariat.</span>
+                <span class="lang-zh">如有任何疑問或贊助查詢，歡迎與大會秘書處聯絡。</span>
+            </p>
+
+            <div class="contact-grid">
+                <!-- Info Card -->
+                <div class="contact-info-card">
+                    <h3><span class="lang-en">Get in Touch</span><span class="lang-zh">聯絡資訊</span></h3>
+                    
+                    <div class="info-item">
+                        <div class="icon">✉️</div>
+                        <div class="details">
+                            <label><span class="lang-en">Direct Email</span><span class="lang-zh">大會電郵</span></label>
+                            <a href="mailto:icecpaqs28@gmail.com">icecpaqs28@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">🏢</div>
+                        <div class="details">
+                            <label><span class="lang-en">Host Institution</span><span class="lang-zh">主辦機構</span></label>
+                            <p>The Hong Kong Institute of Surveyors (HKIS)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📍</div>
+                        <div class="details">
+                            <label><span class="lang-en">Address</span><span class="lang-zh">地址</span></label>
+                            <p>
+                                <span class="lang-en">Room 1205, 12/F, Wing On Centre, 111 Connaught Road Central, Sheung Wan, Hong Kong</span>
+                                <span class="lang-zh">香港上環干諾道中111號永安中心12樓1205室</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📞</div>
+                        <div class="details">
+                            <label><span class="lang-en">Telephone</span><span class="lang-zh">電話</span></label>
+                            <p>+852 2526 3679</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="contact-form-card">
+                    <!-- Standard FormSubmit Form using your secure hash -->
+                    <form action="https://formsubmit.co/47422ac3ceb3cb128c3de03e69f7915f" method="POST">
+                        
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Inquiry - ICEC-PAQS Joint World Congress 2028">
+                        <input type="hidden" name="_next" value="https://www.icecpaqs2028.com/">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group">
+                            <label for="fullName"><span class="lang-en">Full Name *</span><span class="lang-zh">姓名 *</span></label>
+                            <input type="text" name="Name" id="fullName" class="form-control" placeholder="e.g. Sr John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddr"><span class="lang-en">Email Address *</span><span class="lang-zh">電郵地址 *</span></label>
+                            <input type="email" name="Email" id="emailAddr" class="form-control" placeholder="e.g. john.doe@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orgName"><span class="lang-en">Company / Organisation</span><span class="lang-zh">公司 / 機構名稱</span></label>
+                            <input type="text" name="Organisation" id="orgName" class="form-control" placeholder="e.g. HKIS / Quantity Surveying Firm">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msgSubject"><span class="lang-en">Subject</span><span class="lang-zh">主題</span></label>
+                            <input type="text" name="Subject" id="msgSubject" class="form-control" placeholder="e.g. Sponsorship Inquiry / Registration">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="messageBody"><span class="lang-en">Message *</span><span class="lang-zh">訊息內容 *</span></label>
+                            <textarea name="Message" id="messageBody" class="form-control" placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="lang-en">✉️ Send Message</span>
+                            <span class="lang-zh">✉️ 發送訊息</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Links Section ===== -->
+    <section class="section-links" id="links">
+        <div class="container">
+            <h2><span class="lang-en">Related Websites</span><span class="lang-zh">相關連結</span></h2>
+            <div class="links-grid">
+                <a href="https://www.paqs2026.com/" class="link-card" target="_blank">🌐 <span class="lang-en">Pacific Association of Quantity Surveyors 2026 Congress</span><span class="lang-zh">太平洋工料測量師協會 2026 大會</span></a>
+                <a href="https://www.paqs.net/" class="link-card" target="_blank">🌍 <span class="lang-en">Pacific Association of Quantity Surveyors Official Site</span><span class="lang-zh">太平洋工料測量師協會官方網站</span></a>
+                <a href="https://icoste.org/" class="link-card" target="_blank">🧾 <span class="lang-en">International Cost Engineering Council Official Site</span><span class="lang-zh">國際成本工程委員會官方網站</span></a>
+            </div>
+            <p style="margin-top: 28px; color:#6b7f94; font-size:0.9rem;">
+                <span class="lang-en"><em>External links will open in a new tab.</em></span>
+                <span class="lang-zh"><em>外部連結將在新分頁中打開。</em></span>
+            </p>
         </div>
     </section>
 
     <!-- ===== Footer ===== -->
     <footer class="footer">
         <div class="container">
-            <div>© 2026 · ICEC-PAQS Joint World Congress 2028 · Hong Kong</div>
+            <div><span class="lang-en">© 2026 · ICEC-PAQS Joint World Congress 2028 · Hong Kong</span><span class="lang-zh">© 2026 · ICEC-PAQS 2028 聯合世界大會 · 香港</span></div>
+            <div style="font-size:0.85rem;">
+                <span class="lang-en">Organised by The Hong Kong Institute of Surveyors</span>
+                <span class="lang-zh">主辦：香港測量師學會</span>
+                &nbsp;|&nbsp;
+                <a href="#"><span class="lang-en">Privacy</span><span class="lang-zh">私隱政策</span></a>
+                ·
+                <a href="#"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
+            </div>
         </div>
     </footer>
 
+    <!-- ===== Language Toggle Script ===== -->
     <script>
         (function() {
+            // Language Handler
             const body = document.body;
             const langBtns = document.querySelectorAll('.lang-btn');
+
             function setLanguage(lang) {
                 body.classList.remove('lang-en', 'lang-zh');
                 body.classList.add('lang-' + lang);
+
                 langBtns.forEach(btn => {
                     btn.classList.remove('active');
-                    if (btn.dataset.lang === lang) btn.classList.add('active');
+                    if (btn.dataset.lang === lang) {
+                        btn.classList.add('active');
+                    }
                 });
+
                 localStorage.setItem('icec-paqs-lang', lang);
             }
+
             const savedLang = localStorage.getItem('icec-paqs-lang');
-            setLanguage(savedLang || 'en');
-            langBtns.forEach(btn => btn.addEventListener('click', function() { setLanguage(this.dataset.lang); }));
+            if (savedLang && (savedLang === 'en' || savedLang === 'zh')) {
+                setLanguage(savedLang);
+            } else {
+                setLanguage('en');
+            }
+
+            langBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const lang = this.dataset.lang;
+                    setLanguage(lang);
+                });
+            });
         })();
     </script>
 </body>

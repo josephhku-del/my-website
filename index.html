@@ -915,34 +915,34 @@
                     </div>
                 </div>
 
-                <!-- Form Card -->
+                <!-- Form Card - ZERO EXTERNAL LINKS -->
                 <div class="contact-form-card">
-                    <form id="contactForm">
+                    <form id="safeContactForm">
                         <div id="formStatus" style="display:none; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-weight: 600; font-size: 0.95rem;"></div>
 
                         <div class="form-group">
                             <label for="fullName"><span class="lang-en">Full Name *</span><span class="lang-zh">姓名 *</span></label>
-                            <input type="text" id="fullName" name="Name" class="form-control" placeholder="e.g. Sr John Doe" required>
+                            <input type="text" id="fullName" class="form-control" placeholder="e.g. Sr John Doe" required>
                         </div>
 
                         <div class="form-group">
                             <label for="emailAddr"><span class="lang-en">Email Address *</span><span class="lang-zh">電郵地址 *</span></label>
-                            <input type="email" id="emailAddr" name="Email" class="form-control" placeholder="e.g. john.doe@company.com" required>
+                            <input type="email" id="emailAddr" class="form-control" placeholder="e.g. john.doe@company.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="orgName"><span class="lang-en">Company / Organisation</span><span class="lang-zh">公司 / 機構名稱</span></label>
-                            <input type="text" id="orgName" name="Organisation" class="form-control" placeholder="e.g. HKIS / Quantity Surveying Firm">
+                            <input type="text" id="orgName" class="form-control" placeholder="e.g. HKIS / Quantity Surveying Firm">
                         </div>
 
                         <div class="form-group">
                             <label for="msgSubject"><span class="lang-en">Subject</span><span class="lang-zh">主題</span></label>
-                            <input type="text" id="msgSubject" name="Subject" class="form-control" placeholder="e.g. Sponsorship Inquiry / Registration">
+                            <input type="text" id="msgSubject" class="form-control" placeholder="e.g. Sponsorship Inquiry / Registration">
                         </div>
 
                         <div class="form-group">
                             <label for="messageBody"><span class="lang-en">Message *</span><span class="lang-zh">訊息內容 *</span></label>
-                            <textarea id="messageBody" name="Message" class="form-control" placeholder="Type your message here..." required></textarea>
+                            <textarea id="messageBody" class="form-control" placeholder="Type your message here..." required></textarea>
                         </div>
 
                         <button type="submit" id="submitBtn" class="submit-btn">
@@ -984,9 +984,10 @@
         </div>
     </footer>
 
-    <!-- ===== Language Toggle Script ===== -->
+    <!-- ===== Language Toggle Script and Local Mailto Handler ===== -->
     <script>
         (function() {
+            // Language Handler
             const body = document.body;
             const langBtns = document.querySelectorAll('.lang-btn');
 
@@ -1018,8 +1019,8 @@
                 });
             });
 
-            // Contact Form Native Mailto Handler (Bypasses Firewall / Endpoint Blockers)
-            const contactForm = document.getElementById('contactForm');
+            // Contact Form Native Mailto Handler (Completely safe from Firewalls)
+            const contactForm = document.getElementById('safeContactForm');
             const formStatus = document.getElementById('formStatus');
 
             if (contactForm) {
@@ -1034,17 +1035,22 @@
                     
                     const isZh = body.classList.contains('lang-zh');
 
+                    // Formats the body to open cleanly in the user's default email client
                     const formattedBody = `Name: ${name}\nEmail: ${email}\nOrganisation: ${org}\n\nMessage:\n${message}`;
+                    
+                    // Creates a safe mailto link that your browser executes natively without network requests
                     const mailtoUrl = `mailto:icecpaqs28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedBody)}`;
 
+                    // Trigger the user's email client
                     window.location.href = mailtoUrl;
 
+                    // Show success message
                     formStatus.style.display = 'block';
                     formStatus.style.background = '#dcfce7';
                     formStatus.style.color = '#166534';
                     formStatus.innerText = isZh 
-                        ? '✅ 已開啟您的電郵程式發送訊息。您也可以直接發送電郵至 icecpaqs28@gmail.com。' 
-                        : '✅ Opening your mail application... You can also email us directly at icecpaqs28@gmail.com.';
+                        ? '✅ 已嘗試開啟您的電郵應用程式發送訊息。如未成功，請直接發送電郵至 icecpaqs28@gmail.com。' 
+                        : '✅ Opening your local mail application... If it doesn\'t open, you can email us directly at icecpaqs28@gmail.com.';
                 });
             }
         })();

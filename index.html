@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&family=Noto+Sans+TC:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -19,6 +20,7 @@
             background-color: #f8fafc;
             color: #0b1e33;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -27,25 +29,25 @@
             padding: 0 24px;
         }
 
-        /* ===== Top Backdrop Image Banner (Ratio Preserved) ===== */
+        /* Top Backdrop Banner */
         .top-backdrop-container {
             width: 100%;
-            background-color: #0b1e33; /* Solid background filling any extra lateral space */
+            background-color: #0b1e33;
             display: flex;
             justify-content: center;
             align-items: center;
             border-bottom: 3px solid #c92a2a;
-            padding: 10px 0;
+            padding: 12px 0;
         }
         .top-backdrop-img {
             width: 100%;
-            max-height: 400px; /* Reduced overall height */
+            max-height: 320px;
             height: auto;
-            object-fit: contain; /* Keeps the full image visible without cropping */
+            object-fit: contain;
             display: block;
         }
 
-        /* ===== Language Switcher & Nav ===== */
+        /* Navbar */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
@@ -62,7 +64,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
         .brand {
             font-weight: 900;
@@ -76,24 +78,25 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 20px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
         .nav-links a {
             text-decoration: none;
             color: #1e3a5f;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             transition: color 0.2s;
-            margin-left: 0;
-        }
-        .nav-links a:not(:last-child) {
-            margin-right: 24px;
         }
         .nav-links a:hover {
             color: #c92a2a;
         }
 
-        /* Language Toggle */
+        /* Language Toggle Button */
         .lang-switch {
             display: flex;
             gap: 4px;
@@ -123,18 +126,10 @@
             color: #0b1e33;
         }
 
-        @media (max-width: 700px) {
-            .navbar .container { flex-direction: column; gap: 12px; }
-            .nav-right { width: 100%; justify-content: space-between; }
-            .nav-links a { margin: 0 8px; }
-            .nav-links a:not(:last-child) { margin-right: 8px; }
-            .top-backdrop-img { max-height: 120px; }
-        }
-
-        /* ===== Hero ===== */
+        /* Hero Header */
         .hero {
             position: relative;
-            padding: 100px 0 80px;
+            padding: 90px 0 80px;
             background-color: #0b1e33;
             background-image: linear-gradient(135deg, rgba(11, 30, 51, 0.88) 0%, rgba(11, 30, 51, 0.95) 100%),
                               url('https://images.unsplash.com/photo-1506158669146-619067262a36?auto=format&fit=crop&w=1920&q=80');
@@ -151,7 +146,6 @@
             align-items: center;
         }
 
-        /* Full Logos Implementation */
         .hero-logos-container {
             display: flex;
             justify-content: center;
@@ -235,9 +229,9 @@
             gap: 8px 20px;
         }
 
-        /* ===== About Section ===== */
+        /* About Section */
         .section-about {
-            padding: 60px 0;
+            padding: 70px 0;
             background: #ffffff;
         }
         .section-about .container {
@@ -272,10 +266,87 @@
             line-height: 1.7;
         }
 
-        /* ===== Organiser Section ===== */
+        /* Committee Section */
+        .section-committee {
+            padding: 70px 0;
+            background: #f1f5f9;
+            border-top: 1px solid #e2e8f0;
+        }
+        .section-committee h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            color: #0b1e33;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #6b7f94;
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+        }
+        .committee-group {
+            margin-bottom: 40px;
+        }
+        .committee-group-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #c92a2a;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .committee-group-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: #e2e8f0;
+        }
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .committee-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .committee-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(11,30,51,0.08);
+            border-color: #cbd5e1;
+        }
+        .member-role {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #6b7f94;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0b1e33;
+            margin-bottom: 4px;
+        }
+        .member-title {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        /* Organiser Section */
         .section-organiser {
-            padding: 56px 0;
-            background: #f8fafc;
+            padding: 70px 0;
+            background: #ffffff;
         }
         .section-organiser .container {
             display: flex;
@@ -286,7 +357,7 @@
             text-align: center;
         }
         .organiser-card {
-            background: #ffffff;
+            background: #f8fafc;
             padding: 48px 48px;
             border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
@@ -295,6 +366,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 1px solid #e2e8f0;
         }
         .card-logo-img-full {
             max-width: 240px; 
@@ -327,7 +399,7 @@
             font-size: 1rem; 
             color: #2c4c6e; 
             max-width: 400px;
-            background: #ffffff;
+            background: #f8fafc;
             padding: 32px;
             border-radius: 20px;
             border: 1px solid #e2e8f0;
@@ -355,7 +427,129 @@
             object-fit: contain;
         }
 
-        /* ===== Links Section ===== */
+        /* Contact Section */
+        .section-contact {
+            padding: 70px 0;
+            background: #0b1e33;
+            color: #ffffff;
+        }
+        .section-contact h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .section-contact .contact-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 36px;
+            backdrop-filter: blur(10px);
+        }
+        .contact-info-card h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #f4c542;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .info-item .icon {
+            font-size: 1.3rem;
+            line-height: 1;
+            margin-top: 3px;
+        }
+        .info-item .details label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #94a3b8;
+            font-weight: 700;
+        }
+        .info-item .details p, .info-item .details a {
+            font-size: 1.02rem;
+            color: #f1f5f9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .info-item .details a:hover {
+            color: #f4c542;
+            text-decoration: underline;
+        }
+
+        .contact-form-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 36px;
+            color: #0b1e33;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            font-family: inherit;
+            font-size: 0.98rem;
+            color: #0f172a;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #0b1e33;
+            box-shadow: 0 0 0 3px rgba(11, 30, 51, 0.1);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #c92a2a;
+            color: #ffffff;
+            font-family: inherit;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .submit-btn:hover {
+            background: #a61e1e;
+            transform: translateY(-1px);
+        }
+
+        /* Links Section */
         .section-links {
             padding: 56px 0 64px;
             background: #f8fafc;
@@ -402,9 +596,9 @@
             box-shadow: 0 12px 24px rgba(11,30,51,0.12);
         }
 
-        /* ===== Footer ===== */
+        /* Footer */
         .footer {
-            background: #0b1e33;
+            background: #06111e;
             color: #b0c7dd;
             padding: 32px 0;
             text-align: center;
@@ -424,7 +618,36 @@
             gap: 8px;
         }
 
-        /* ===== Language Visibility ===== */
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-logos-container { gap: 24px; padding: 20px; border-radius: 16px; }
+            .logo-img-full { max-width: 110px; height: 50px; } 
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 600px) {
+            .navbar .container { flex-direction: column; gap: 12px; }
+            .nav-right { width: 100%; justify-content: space-between; }
+            .hero { padding: 60px 0 48px; }
+            .hero h1 { font-size: 2rem; }
+            .hero .subhead { font-size: 1.3rem; } 
+            .hero .date-location { flex-direction: column; gap: 4px; }
+            .theme-block { padding: 24px 20px; }
+            .theme-block p { font-size: 1.4rem; } 
+            .organiser-card { padding: 32px 20px; }
+            .links-grid { flex-direction: column; align-items: center; }
+            .link-card { width: 100%; max-width: 350px; justify-content: center; font-size: 0.95rem; }
+            .top-backdrop-img { max-height: 180px; }
+        }
+
+        /* Language Toggle Visibility Rules */
         .lang-en, .lang-zh {
             transition: opacity 0.15s ease;
         }
@@ -438,32 +661,11 @@
         body.lang-en .block-zh { display: none; }
         body.lang-zh .block-zh { display: block; }
         body.lang-zh .block-en { display: none; }
-
-        .inline-block {
-            display: inline-block;
-        }
-
-        @media (max-width: 768px) {
-            .hero-logos-container { gap: 24px; padding: 20px; border-radius: 16px; }
-            .logo-img-full { max-width: 110px; height: 50px; } 
-        }
-
-        @media (max-width: 600px) {
-            .hero { padding: 60px 0 48px; }
-            .hero h1 { font-size: 2rem; }
-            .hero .subhead { font-size: 1.3rem; } 
-            .hero .date-location { flex-direction: column; gap: 4px; }
-            .theme-block { padding: 24px 20px; }
-            .theme-block p { font-size: 1.4rem; } 
-            .organiser-card { padding: 32px 20px; }
-            .links-grid { flex-direction: column; align-items: center; }
-            .link-card { width: 100%; max-width: 350px; justify-content: center; font-size: 0.95rem; }
-        }
     </style>
 </head>
 <body class="lang-en">
 
-    <!-- ===== Top Backdrop Image Banner (Ratio Preserved) ===== -->
+    <!-- ===== Top Backdrop Image Banner ===== -->
     <div class="top-backdrop-container">
         <img src="https://github.com/josephhku-del/my-website/blob/main/congressthemebackdrop.jpeg?raw=true" alt="Congress Theme Backdrop" class="top-backdrop-img">
     </div>
@@ -475,7 +677,9 @@
             <div class="nav-right">
                 <div class="nav-links">
                     <a href="#about"><span class="lang-en">About</span><span class="lang-zh">關於大會</span></a>
+                    <a href="#committee"><span class="lang-en">Committee</span><span class="lang-zh">籌備委員會</span></a>
                     <a href="#organiser"><span class="lang-en">Organiser</span><span class="lang-zh">主辦機構</span></a>
+                    <a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
                     <a href="#links"><span class="lang-en">Links</span><span class="lang-zh">相關連結</span></a>
                 </div>
                 <div class="lang-switch">
@@ -503,7 +707,7 @@
                 </a>
             </div>
 
-            <span class="hero-badge"><span class="lang-en">🏙️ Hong Kong · September 2028</span><span class="lang-zh">🏙️ 香港 · 2028年9月</span></span>
+            <span class="hero-badge"><span class="lang-en">🏙️ Hong Kong · September 2026</span><span class="lang-zh">🏙️ 香港 · 2026年9月</span></span>
             <h1>
                 <span class="lang-en">ICEC-PAQS Joint World Congress <span class="highlight">2028</span></span>
                 <span class="lang-zh">ICEC-PAQS 2028 聯合世界大會</span>
@@ -513,7 +717,7 @@
                 <span class="lang-zh">超越演算法：透過大數據, 數字孿生和認知人工智能<br>提升建築成本管理</span>
             </p>
             <div class="date-location">
-                <span><span class="lang-en">📅 September 2028</span><span class="lang-zh">📅 2028年9月</span></span>
+                <span><span class="lang-en">📅 September 2026</span><span class="lang-zh">📅 2026年9月</span></span>
                 <span style="opacity:0.4;">|</span>
                 <span><span class="lang-en">📍 Venue: To be confirmed</span><span class="lang-zh">📍 地點：待定</span></span>
             </div>
@@ -543,6 +747,85 @@
                     成本工程、項目控制和工料測量領域。
                 </span>
             </p>
+        </div>
+    </section>
+
+    <!-- ===== Organising Committee Section ===== -->
+    <section class="section-committee" id="committee">
+        <div class="container">
+            <h2><span class="lang-en">Organising Committee</span><span class="lang-zh">籌備委員會</span></h2>
+            <p class="section-subtitle">
+                <span class="lang-en">Meet the team leading the preparation of the ICEC-PAQS Joint World Congress 2028</span>
+                <span class="lang-zh">認識引領 ICEC-PAQS 2028 聯合世界大會籌備工作的委員會成員</span>
+            </p>
+
+            <!-- Leadership Group -->
+            <div class="committee-group">
+                <div class="committee-group-title">
+                    <span class="lang-en">Organising Committee Co-Chairs</span>
+                    <span class="lang-zh">籌備委員會聯合主席</span>
+                </div>
+                <div class="committee-grid">
+                    <div class="committee-card">
+                        <div class="member-role"><span class="lang-en">Co-Chair</span><span class="lang-zh">聯合主席</span></div>
+                        <div class="member-name">Sr Paul HO</div>
+                        <div class="member-title">
+                            <span class="lang-en">Past Chairman, Quantity Surveying Division, HKIS</span>
+                            <span class="lang-zh">香港測量師學會工料測量組前主席</span>
+                        </div>
+                    </div>
+                    <div class="committee-card">
+                        <div class="member-role"><span class="lang-en">Co-Chair</span><span class="lang-zh">聯合主席</span></div>
+                        <div class="member-name">Sr Sunny CHOI</div>
+                        <div class="member-title">
+                            <span class="lang-en">Chairman, Quantity Surveying Division, HKIS</span>
+                            <span class="lang-zh">香港測量師學會工料測量組主席</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Committee Members Group -->
+            <div class="committee-group">
+                <div class="committee-group-title">
+                    <span class="lang-en">Committee Members</span>
+                    <span class="lang-zh">委員會委員</span>
+                </div>
+                <div class="committee-grid">
+                    <div class="committee-card">
+                        <div class="member-role"><span class="lang-en">Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Keith YIM</div>
+                        <div class="member-title">
+                            <span class="lang-en">Past Chairman, Quantity Surveying Division, HKIS</span>
+                            <span class="lang-zh">香港測量師學會工料測量組前主席</span>
+                        </div>
+                    </div>
+                    <div class="committee-card">
+                        <div class="member-role"><span class="lang-en">Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Jesse WONG</div>
+                        <div class="member-title">
+                            <span class="lang-en">Past Chairman, Quantity Surveying Division, HKIS</span>
+                            <span class="lang-zh">香港測量師學會工料測量組前主席</span>
+                        </div>
+                    </div>
+                    <div class="committee-card">
+                        <div class="member-role"><span class="lang-en">Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Dr. Mei-yung LEUNG</div>
+                        <div class="member-title">
+                            <span class="lang-en">Professor & Committee Member, HKIS</span>
+                            <span class="lang-zh">教授及香港測量師學會委員會委員</span>
+                        </div>
+                    </div>
+                    <div class="committee-card">
+                        <div class="member-role"><span class="lang-en">Member</span><span class="lang-zh">委員</span></div>
+                        <div class="member-name">Sr Joseph HKU</div>
+                        <div class="member-title">
+                            <span class="lang-en">Organising Committee Secretariat & Digital Coordinator</span>
+                            <span class="lang-zh">籌備委員會秘書處及數位協調員</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -582,6 +865,99 @@
         </div>
     </section>
 
+    <!-- ===== Contact Section ===== -->
+    <section class="section-contact" id="contact">
+        <div class="container">
+            <h2><span class="lang-en">Contact Us</span><span class="lang-zh">聯絡我們</span></h2>
+            <p class="contact-subtitle">
+                <span class="lang-en">Have questions or sponsorship inquiries? Reach out to the Congress Secretariat.</span>
+                <span class="lang-zh">如有任何疑問或贊助查詢，歡迎與大會秘書處聯絡。</span>
+            </p>
+
+            <div class="contact-grid">
+                <!-- Info Card -->
+                <div class="contact-info-card">
+                    <h3><span class="lang-en">Get in Touch</span><span class="lang-zh">聯絡資訊</span></h3>
+                    
+                    <div class="info-item">
+                        <div class="icon">✉️</div>
+                        <div class="details">
+                            <label><span class="lang-en">Direct Email</span><span class="lang-zh">大會電郵</span></label>
+                            <a href="mailto:icecpaqs28@gmail.com">icecpaqs28@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">🏢</div>
+                        <div class="details">
+                            <label><span class="lang-en">Host Institution</span><span class="lang-zh">主辦機構</span></label>
+                            <p>The Hong Kong Institute of Surveyors (HKIS)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📍</div>
+                        <div class="details">
+                            <label><span class="lang-en">Address</span><span class="lang-zh">地址</span></label>
+                            <p>
+                                <span class="lang-en">Room 1205, 12/F, Wing On Centre, 111 Connaught Road Central, Sheung Wan, Hong Kong</span>
+                                <span class="lang-zh">香港上環干諾道中111號永安中心12樓1205室</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">📞</div>
+                        <div class="details">
+                            <label><span class="lang-en">Telephone</span><span class="lang-zh">電話</span></label>
+                            <p>+852 2526 3679</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="contact-form-card">
+                    <form action="https://formsubmit.co/icecpaqs28@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration Settings -->
+                        <input type="hidden" name="_subject" value="New Inquiry - ICEC-PAQS Joint World Congress 2028 Website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group">
+                            <label for="fullName"><span class="lang-en">Full Name *</span><span class="lang-zh">姓名 *</span></label>
+                            <input type="text" id="fullName" name="Name" class="form-control" placeholder="e.g. Sr John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddr"><span class="lang-en">Email Address *</span><span class="lang-zh">電郵地址 *</span></label>
+                            <input type="email" id="emailAddr" name="Email" class="form-control" placeholder="e.g. john.doe@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orgName"><span class="lang-en">Company / Organisation</span><span class="lang-zh">公司 / 機構名稱</span></label>
+                            <input type="text" id="orgName" name="Organisation" class="form-control" placeholder="e.g. HKIS / Quantity Surveying Firm">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msgSubject"><span class="lang-en">Subject</span><span class="lang-zh">主題</span></label>
+                            <input type="text" id="msgSubject" name="Subject" class="form-control" placeholder="e.g. Sponsorship Inquiry / Registration">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="messageBody"><span class="lang-en">Message *</span><span class="lang-zh">訊息內容 *</span></label>
+                            <textarea id="messageBody" name="Message" class="form-control" placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="lang-en">Send Message</span>
+                            <span class="lang-zh">發送訊息</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== Links Section ===== -->
     <section class="section-links" id="links">
         <div class="container">
@@ -606,9 +982,7 @@
                 <span class="lang-en">Organised by The Hong Kong Institute of Surveyors</span>
                 <span class="lang-zh">主辦：香港測量師學會</span>
                 &nbsp;|&nbsp;
-                <a href="#"><span class="lang-en">Privacy</span><span class="lang-zh">私隱政策</span></a>
-                ·
-                <a href="#"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
+                <a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
             </div>
         </div>
     </footer>

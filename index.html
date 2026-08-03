@@ -579,3 +579,247 @@
             font-weight: 700;
             margin-bottom: 32px;
             color: #0b1e33;
+        }
+        .links-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .link-card {
+            background: #ffffff;
+            padding: 18px 32px;
+            border-radius: 60px;
+            transition: all 0.2s;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            color: #0b1e33;
+            border: 1px solid #e2e8f0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+        .link-card:hover {
+            background: #0b1e33;
+            color: #fff;
+            border-color: #0b1e33;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(11,30,51,0.12);
+        }
+
+        /* Footer */
+        .footer {
+            background: #06111e;
+            color: #b0c7dd;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .footer a {
+            color: #b0c7dd;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        .footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-logos-container { gap: 24px; padding: 20px; border-radius: 16px; }
+            .logo-img-full { max-width: 110px; height: 50px; } 
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 600px) {
+            .navbar .container { flex-direction: column; gap: 12px; }
+            .nav-right { width: 100%; justify-content: space-between; }
+            .hero { padding: 60px 0 48px; }
+            .hero h1 { font-size: 2rem; }
+            .hero .subhead { font-size: 1.3rem; } 
+            .hero .date-location { flex-direction: column; gap: 4px; }
+            .theme-block { padding: 24px 20px; }
+            .theme-block p { font-size: 1.4rem; } 
+            .organiser-card { padding: 32px 20px; }
+            .links-grid { flex-direction: column; align-items: center; }
+            .link-card { width: 100%; max-width: 350px; justify-content: center; font-size: 0.95rem; }
+            .top-backdrop-img { max-height: 180px; }
+        }
+
+        /* Language Toggle Visibility Rules */
+        .lang-en, .lang-zh {
+            transition: opacity 0.15s ease;
+        }
+        body:not(.lang-zh) .lang-zh { display: none; }
+        body:not(.lang-en) .lang-en { display: none; }
+        body.lang-en .lang-en { display: inline; }
+        body.lang-en .lang-zh { display: none; }
+        body.lang-zh .lang-zh { display: inline; }
+        body.lang-zh .lang-en { display: none; }
+        body.lang-en .block-en { display: block; }
+        body.lang-en .block-zh { display: none; }
+        body.lang-zh .block-zh { display: block; }
+        body.lang-zh .block-en { display: none; }
+    </style>
+</head>
+<body class="lang-en">
+
+    <!-- ===== Top Backdrop Image Banner ===== -->
+    <div class="top-backdrop-container">
+        <img src="https://github.com/josephhku-del/my-website/blob/main/congressthemebackdrop.jpeg?raw=true" alt="Congress Theme Backdrop" class="top-backdrop-img">
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">ICEC-PAQS <span>2028</span></div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#about"><span class="lang-en">About</span><span class="lang-zh">關於大會</span></a>
+                    <a href="#committee"><span class="lang-en">Committee</span><span class="lang-zh">籌備委員會</span></a>
+                    <a href="#organiser"><span class="lang-en">Organiser</span><span class="lang-zh">主辦機構</span></a>
+                    <a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh">聯絡我們</span></a>
+                    <a href="#links"><span class="lang-en">Links</span><span class="lang-zh">相關連結</span></a>
+                </div>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">繁體中文</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <header class="hero">
+        <div class="container">
+            
+            <div class="hero-logos-container">
+                <a href="https://icoste.org/" class="hero-logo-item" target="_blank" title="International Cost Engineering Council">
+                    <img src="https://github.com/josephhku-del/my-website/blob/main/iceclogo.jpg?raw=true" alt="International Cost Engineering Council Logo" class="logo-img-full">
+                </a>
+                <a href="https://www.paqs.net/" class="hero-logo-item" target="_blank" title="Pacific Association of Quantity Surveyors">
+                    <img src="https://github.com/josephhku-del/my-website/blob/main/PAQS-logo%20(1).jpg?raw=true" alt="Pacific Association of Quantity Surveyors Logo" class="logo-img-full">
+                </a>
+                <a href="https://www.hkis.org.hk/" class="hero-logo-item" target="_blank" title="The Hong Kong Institute of Surveyors">
+                    <img src="https://github.com/josephhku-del/my-website/blob/main/Screenshot%202026-07-21%20103627.jpg?raw=true" alt="The Hong Kong Institute of Surveyors Logo" class="logo-img-full">
+                </a>
+            </div>
+
+            <span class="hero-badge"><span class="lang-en">🏙️ Hong Kong · September 2026</span><span class="lang-zh">🏙️ 香港 · 2026年9月</span></span>
+            <h1>
+                <span class="lang-en">ICEC-PAQS Joint World Congress <span class="highlight">2028</span></span>
+                <span class="lang-zh">ICEC-PAQS 2028 聯合世界大會</span>
+            </h1>
+            <p class="subhead">
+                <span class="lang-en">Beyond the Algorithm: Elevating Construction Cost Management<br>through Big Data, Digital Twins, and Cognitive AI</span>
+                <span class="lang-zh">超越演算法：透過大數據, 數字孿生和認知人工智能<br>提升建築成本管理</span>
+            </p>
+            <div class="date-location">
+                <span><span class="lang-en">📅 September 2026</span><span class="lang-zh">📅 2026年9月</span></span>
+                <span style="opacity:0.4;">|</span>
+                <span><span class="lang-en">📍 Venue: To be confirmed</span><span class="lang-zh">📍 地點：待定</span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== About Section ===== -->
+    <section class="section-about" id="about">
+        <div class="container">
+            <h2><span class="lang-en">About the Congress</span><span class="lang-zh">關於大會</span></h2>
+            <div class="theme-block">
+                <p>
+                    <span class="lang-en">“Beyond the Algorithm: Elevating Construction Cost Management through Big Data, Digital Twins, and Cognitive AI”</span>
+                    <span class="lang-zh">“超越演算法：透過大數據, 數字孿生和認知人工智能提升建築成本管理”</span>
+                </p>
+            </div>
+            <p class="about-description">
+                <span class="lang-en">
+                    The <strong>ICEC-PAQS Joint World Congress 2028</strong> brings together the International Cost Engineering Council
+                    and the Pacific Association of Quantity Surveyors to explore how next‑generation
+                    technologies are transforming cost engineering, project controls, and quantity surveying
+                    across the Asia‑Pacific region and beyond.
+                </span>
+                <span class="lang-zh">
+                    <strong>ICEC-PAQS 2028 聯合世界大會</strong>匯聚了國際成本工程委員會
+                    與太平洋工料測量師協會, 共同探討下一代科技如何改變亞太地區及全球的
+                    成本工程、項目控制和工料測量領域。
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== Organising Committee Section ===== -->
+    <section class="section-committee" id="committee">
+        <div class="container">
+            <h2><span class="lang-en">Organising Committee</span><span class="lang-zh">籌備委員會</span></h2>
+            <p class="section-subtitle"><span class="lang-en">Official QSD Council 2024-2025</span><span class="lang-zh">QSD 理事會 2024-2025</span></p>
+
+            <div class="committee-grid">
+                <!-- Data from HKIS Official Source -->
+                <div class="committee-card"><div class="member-name">Sr NGAI Chi Hang, Tim</div><div class="member-role">Chairman</div></div>
+                <div class="committee-card"><div class="member-name">Sr TING Yuen Chun Eric</div><div class="member-role">Vice-Chairman</div></div>
+                <div class="committee-card"><div class="member-name">Sr NG Man Yan Mandy</div><div class="member-role">Vice-Chairman</div></div>
+                <div class="committee-card"><div class="member-name">Sr WONG Wai Yee Christina</div><div class="member-role">Honorary Secretary</div></div>
+                <div class="committee-card"><div class="member-name">Sr WONG Shuk Yu, Karen</div><div class="member-role">Honorary Treasurer</div></div>
+                <div class="committee-card"><div class="member-name">Sr CHONG Hok Ching, Joseph</div><div class="member-role">OC Chair / Council Member</div></div>
+                <div class="committee-card"><div class="member-name">Sr YING Chung Sau, Rex</div><div class="member-role">Council Member</div></div>
+                <div class="committee-card"><div class="member-name">Sr LO Kar Yin, Betty</div><div class="member-role">Council Member</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Organiser Section ===== -->
+    <section class="section-organiser" id="organiser">
+        <div class="container">
+            <div class="organiser-card">
+                <img src="https://github.com/josephhku-del/my-website/blob/main/Screenshot%202026-07-21%20103627.jpg?raw=true" alt="HKIS Logo" class="card-logo-img-full">
+                <h3><span class="lang-en">Host Organisation</span><span class="lang-zh">主辦機構</span></h3>
+                <div class="org-name"><span class="lang-en">The Hong Kong Institute of Surveyors</span><span class="lang-zh">香港測量師學會</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div>© 2026 · ICEC-PAQS Joint World Congress 2028 · Hong Kong</div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const body = document.body;
+            const langBtns = document.querySelectorAll('.lang-btn');
+            function setLanguage(lang) {
+                body.classList.remove('lang-en', 'lang-zh');
+                body.classList.add('lang-' + lang);
+                langBtns.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.lang === lang) btn.classList.add('active');
+                });
+                localStorage.setItem('icec-paqs-lang', lang);
+            }
+            const savedLang = localStorage.getItem('icec-paqs-lang');
+            setLanguage(savedLang || 'en');
+            langBtns.forEach(btn => btn.addEventListener('click', function() { setLanguage(this.dataset.lang); }));
+        })();
+    </script>
+</body>
+</html>

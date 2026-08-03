@@ -917,12 +917,7 @@
 
                 <!-- Form Card -->
                 <div class="contact-form-card">
-                    <form id="contactForm" action="https://formsubmit.co/ajax/icecpaqs28@gmail.com" method="POST">
-                        <!-- FormSubmit Configuration Settings -->
-                        <input type="hidden" name="_subject" value="New Inquiry - ICEC-PAQS Joint World Congress 2028 Website">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_captcha" value="false">
-
+                    <form id="contactForm">
                         <div id="formStatus" style="display:none; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-weight: 600; font-size: 0.95rem;"></div>
 
                         <div class="form-group">
@@ -951,8 +946,8 @@
                         </div>
 
                         <button type="submit" id="submitBtn" class="submit-btn">
-                            <span class="lang-en">Send Message</span>
-                            <span class="lang-zh">發送訊息</span>
+                            <span class="lang-en">✉️ Send via Email Client</span>
+                            <span class="lang-zh">✉️ 開啟電郵發送</span>
                         </button>
                     </form>
                 </div>
@@ -1023,53 +1018,33 @@
                 });
             });
 
-            // Contact Form AJAX Handler
+            // Contact Form Native Mailto Handler (Bypasses Firewall / Endpoint Blockers)
             const contactForm = document.getElementById('contactForm');
             const formStatus = document.getElementById('formStatus');
-            const submitBtn = document.getElementById('submitBtn');
 
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    submitBtn.disabled = true;
-                    submitBtn.style.opacity = '0.7';
+                    const name = document.getElementById('fullName').value;
+                    const email = document.getElementById('emailAddr').value;
+                    const org = document.getElementById('orgName').value;
+                    const subject = document.getElementById('msgSubject').value || 'Inquiry - ICEC-PAQS Joint World Congress 2028';
+                    const message = document.getElementById('messageBody').value;
                     
                     const isZh = body.classList.contains('lang-zh');
-                    formStatus.style.display = 'block';
-                    formStatus.style.background = '#e2e8f0';
-                    formStatus.style.color = '#0b1e33';
-                    formStatus.innerText = isZh ? '正在發送訊息...' : 'Sending message...';
 
-                    fetch(contactForm.action, {
-                        method: 'POST',
-                        body: new FormData(contactForm),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        submitBtn.disabled = false;
-                        submitBtn.style.opacity = '1';
-                        
-                        formStatus.style.background = '#dcfce7';
-                        formStatus.style.color = '#166534';
-                        formStatus.innerText = isZh 
-                            ? '✅ 訊息已成功發送！我們會盡快回覆您。（若未收到，請檢查 icecpaqs28@gmail.com 是否需完成首次激活）' 
-                            : '✅ Message sent successfully! We will get back to you soon. (If emails do not arrive, please check icecpaqs28@gmail.com inbox/spam for a one-time FormSubmit activation email)';
-                        contactForm.reset();
-                    })
-                    .catch(error => {
-                        submitBtn.disabled = false;
-                        submitBtn.style.opacity = '1';
-                        
-                        formStatus.style.background = '#fee2e2';
-                        formStatus.style.color = '#991b1b';
-                        formStatus.innerText = isZh 
-                            ? '❌ 發送失敗，請稍後再試或直接發送電郵至 icecpaqs28@gmail.com' 
-                            : '❌ Failed to send message. Please try again later or email icecpaqs28@gmail.com directly.';
-                    });
+                    const formattedBody = `Name: ${name}\nEmail: ${email}\nOrganisation: ${org}\n\nMessage:\n${message}`;
+                    const mailtoUrl = `mailto:icecpaqs28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedBody)}`;
+
+                    window.location.href = mailtoUrl;
+
+                    formStatus.style.display = 'block';
+                    formStatus.style.background = '#dcfce7';
+                    formStatus.style.color = '#166534';
+                    formStatus.innerText = isZh 
+                        ? '✅ 已開啟您的電郵程式發送訊息。您也可以直接發送電郵至 icecpaqs28@gmail.com。' 
+                        : '✅ Opening your mail application... You can also email us directly at icecpaqs28@gmail.com.';
                 });
             }
         })();
